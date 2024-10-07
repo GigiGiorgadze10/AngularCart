@@ -19,7 +19,7 @@ export class CartComponent {
       size: 'medium', 
       color: 'blue', 
       price: 78.99, 
-      image: 'tshirt.png',  // Correct path
+      image: 'tshirt.png',  
       quantity: 1 
     },
     { 
@@ -27,7 +27,7 @@ export class CartComponent {
       size: 'medium', 
       color: 'blue', 
       price: 39, 
-      image: 'backpack.png',  // Correct path
+      image: 'backpack.png', 
       quantity: 1 
     }
   ];
