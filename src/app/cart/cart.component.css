@@ -1,0 +1,150 @@
+/* General container */
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Left side for the cart items */
+.cart-items {
+  flex: 3;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Right side for the summary and checkout */
+.cart-summary {
+  flex: 1;
+  padding: 20px;
+  background-color: #f3f6fc;
+  border-radius: 8px;
+  margin-left: 20px;
+  border: 1px solid #e3e7ed;
+}
+
+.cart-summary h3 {
+  margin-bottom: 20px;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #e3e7ed;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Product details */
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Buttons */
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+}
+
+button.remove,
+button.save-later {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+button.save-later {
+  background-color: #0061f2;
+}
+
+/* Price and Quantity input */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+input.quantity-input {
+  width: 50px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* Checkout Section */
+.checkout-btn {
+  background-color: #32cd32;
+  color: white;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.apply-coupon {
+  display: flex;
+  align-items: center;
+}
+
+.apply-coupon input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.apply-coupon button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Subtotal, Tax, and Total */
+.cart-summary p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cart-summary .total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+  
+  .cart-summary {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}

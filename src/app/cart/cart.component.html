@@ -1,0 +1,41 @@
+<div class="cart-container">
+  <div class="cart-items">
+    <h2>My Cart ({{ cart.length }})</h2>
+    
+    <div class="cart-item" *ngFor="let item of cart; let i = index">
+      <img src="assets/images/{{ item.image }}" alt="{{item.name}}" class="product-image">
+  <div class="cart-item-details">
+    <h3>{{ item.name }}</h3>
+    <p>Size: {{ item.size }}</p>
+    <p>Color: {{ item.color }}</p>
+    <p>Price: ${{ item.price }}</p>
+      
+
+        <div class="cart-item-quantity">
+          <label for="quantity">Qty: </label>
+          <input type="number" [(ngModel)]="item.quantity" (change)="updateQuantity(i, $event)" min="1">
+        </div>
+      </div>
+
+      <div class="cart-item-actions">
+        <button class="remove" (click)="removeItem(i)">Remove</button>
+        <button class="save-later" (click)="saveForLater(i)">Save for Later</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <h3>Summary</h3>
+    <div class="apply-coupon">
+      <input type="text" [(ngModel)]="couponCode" placeholder="Add coupon">
+      <button (click)="applyCoupon()">Apply</button>
+    </div>
+    
+    <p>Subtotal: ${{ subtotal }}</p>
+    <p>Discount: ${{ discount }}</p>
+    <p>Tax: ${{ tax }}</p>
+    <p class="total">Total: ${{ total }}</p>
+
+    <button class="checkout-btn" (click)="checkout()">Checkout</button>
+  </div>
+</div>
