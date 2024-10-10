@@ -2,7 +2,7 @@
 .cart-container {
   display: flex;
   justify-content: space-between;
-  margin: 22px;
+  margin: 20px;
 }
 
 .cart-items {
